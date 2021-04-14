@@ -28,20 +28,47 @@
         </div>
 
         <div class="content">
-            <div class="main-content">
-              <p>Último vídeo do youtube 👇🏼</p>
-              <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/QgmlGItSjjU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              </div>
+          <div id="secondary-content" class="secondary-content">
+            <h3> <i id="go-back-button" data-feather="arrow-left"></i> Matricule-se!</h3>
+            <a class="link" href="https://api.whatsapp.com/send?phone=5521971643377">
+              Duque de Caxias
+            </a>
+            <a class="link" href="https://api.whatsapp.com/send?phone=5521997254071">
+              Campo Grande
+            </a>
+            <a class="link" href="https://api.whatsapp.com/send?phone=5521964232609">
+              Nova Iguaçu
+            </a>
+            <a class="link" href="https://api.whatsapp.com/send?phone=5521972170187">
+              Santa Cruz
+            </a>
+            <a class="link" href="https://api.whatsapp.com/send?phone=5521994163987">
+              Irajá
+            </a>
+            <a class="link" href="https://api.whatsapp.com/send?phone=5521980849161">
+              Ilha do Governador
+            </a>
+            <a class="link" href="https://api.whatsapp.com/send?phone=5521971614839">
+              São João de Meriti
+            </a>
+          </div>
 
-              <a href="https://www.cursoinvictus.com.br" class="link">
-                💻 Nosso site
-              </a>  
-              <a href="https://www.tiktok.com/@cursoinvictus?lang=pt-BR" class="link">
-                TikTok
-              </a>
-
+          <div class="main-content">
+            <p>Último vídeo do youtube 👇🏼</p>
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/QgmlGItSjjU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
+
+            <a id="setup-button" class="link highlight">
+              ✍🏽 Matricule-se!
+            </a>
+            <a href="https://www.cursoinvictus.com.br" class="link">
+              💻 Nosso site
+            </a>  
+            <a href="https://www.tiktok.com/@cursoinvictus?lang=pt-BR" class="link">
+              TikTok
+            </a>
+
           </div>
         </div>
       </div>
@@ -124,5 +151,23 @@
       },
       retina_detect: true
     });
+  </script>
+  <script>
+    const setupButton = document.getElementById("setup-button");
+    const goBackButton = document.getElementById("go-back-button");
+
+    setupButton.addEventListener("click", showContent);
+    goBackButton.addEventListener("click", hideContent);
+
+    function showContent() {
+      document.getElementById("secondary-content").classList.remove("hide");
+      document.getElementById("secondary-content").classList.add("show");
+    }
+
+    function hideContent() {
+      document.getElementById("secondary-content").classList.remove("show");
+      document.getElementById("secondary-content").classList.add("hide");
+    }
+
   </script>
 </html>
